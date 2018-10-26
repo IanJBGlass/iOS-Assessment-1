@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var Label: UILabel!
+    
+    @IBOutlet weak var TextField: UITextField!
+    
+    @IBAction func Button(_ sender: Any) {
+        let input: String?
+       input = TextField.text
+        Label.text = input
+        self.view.backgroundColor = UIColor.orange
+        let fontSize = self.Label.font.pointSize;
+        Label.font = UIFont(name: "Arial", size: fontSize)
     }
-
-
 }
 
